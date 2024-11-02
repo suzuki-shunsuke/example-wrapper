@@ -24,6 +24,9 @@ on darwin_arm64
 
 2. Install the wrapper by `go install` and run Terraform:
 
+> [!WARNING]
+> `$HOME/go/bin` must take precedence over `$(aqua root-dir)/bin`.
+
 ```console
 $ go install ./cmd/terraform
 $ terraform version
