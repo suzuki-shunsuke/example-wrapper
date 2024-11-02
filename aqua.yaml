@@ -11,5 +11,5 @@ registries:
   type: local
   path: registry.yaml
 packages:
-- name: suzuki-shunsuke/example-wrapper@661e0b9f53059c51ef7927011a0085581c7d1e28
+- name: suzuki-shunsuke/example-wrapper@7110ba7e469f888c86834f783879cb5d86b35390
   registry: local

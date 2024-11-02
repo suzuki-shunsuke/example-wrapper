@@ -3,6 +3,12 @@
 This is an example to wrap Terraform command using [aqua](https://aquaproj.github.io/).
 
 First, [please install aqua](https://aquaproj.github.io/docs/install).
+This example builds the wrapper in Go, so Go is necessary.
+In this approach, the wrapper is installed by aqua, but the registry isn't standard reigstry, so you need to configure and allow the policy.
+
+```sh
+aqua policy allow
+```
 
 And run `aqua i -l`.
 
@@ -10,27 +16,11 @@ And run `aqua i -l`.
 aqua i -l
 ```
 
-1. Run `go run ./cmd/terraform version`:
-
-> [!NOTE]
-> This approach doesn't need aqua.
+Then run `terraform`.
 
 ```console
-$ go run ./cmd/terraform
-2024/11/02 10:15:21 [INFO] Terraform wrapper
-Terraform v1.9.8
-on darwin_arm64
-```
-
-2. Install the wrapper by `go install` and run Terraform:
-
-> [!WARNING]
-> `$HOME/go/bin` must take precedence over `$(aqua root-dir)/bin`.
-
-```console
-$ go install ./cmd/terraform
 $ terraform version
-2024/11/02 10:15:21 [INFO] Terraform wrapper
+2024/11/02 10:30:14 [INFO] Terraform wrapper
 Terraform v1.9.8
 on darwin_arm64
 ```
