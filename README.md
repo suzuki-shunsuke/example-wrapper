@@ -12,7 +12,7 @@ aqua i -l
 
 1. Run `go run ./cmd/terraform version`:
 
-> [!INFO]
+> [!NOTE]
 > This approach doesn't need aqua.
 
 ```console
