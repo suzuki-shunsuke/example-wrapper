@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+set -eu
+
+echo "[INFO] Terraform wrapper"
+
+aqua exec -- terraform "$@"
