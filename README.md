@@ -10,23 +10,24 @@ And run `aqua i -l`.
 aqua i -l
 ```
 
-1. Add `bin` to `$PATH:
+1. Run `go run ./cmd/terraform version`:
 
-```sh
-export PATH=$PWD/bin:$PATH
-```
-
-If you use direnv,
-
-```sh
-direnv allow
-```
-
-2. Run `terraform`:
+> [!INFO]
+> This approach doesn't need aqua.
 
 ```console
+$ go run ./cmd/terraform
+2024/11/02 10:15:21 [INFO] Terraform wrapper
+Terraform v1.9.8
+on darwin_arm64
+```
+
+2. Install the wrapper by `go install` and run Terraform:
+
+```console
+$ go install ./cmd/terraform
 $ terraform version
-[INFO] Terraform wrapper
+2024/11/02 10:15:21 [INFO] Terraform wrapper
 Terraform v1.9.8
 on darwin_arm64
 ```
