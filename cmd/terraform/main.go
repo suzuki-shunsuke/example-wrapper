@@ -14,7 +14,7 @@ func main() {
 
 func core() error {
 	log.Println("[INFO] Terraform wrapper")
-	cmd := exec.Command("aqua", append([]string{"exec", "--", "terraform"}, os.Args[1:]...)...)
+	cmd := exec.Command("aqua", append([]string{"-c", "aqua-terraform.yaml", "exec", "--", "terraform"}, os.Args[1:]...)...)
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
 	if err := cmd.Run(); err != nil {

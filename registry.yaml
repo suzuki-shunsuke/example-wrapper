@@ -3,3 +3,5 @@ packages:
     repo_owner: suzuki-shunsuke
     repo_name: example-wrapper
     path: github.com/suzuki-shunsuke/example-wrapper/cmd/terraform
+    files:
+      - name: terraform
